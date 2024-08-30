@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ficha</title>
+  <!-- CSS only -->
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="js" href="Script.js" type="js">
+</head>
+
+<body>
+  <h2 style="text-align: center; font-family: Arial, Helvetica, cursive; margin-top: 2%;"><b>Ficha de Atendimento</b></h2>
+  <form id="contatoForm" method="post" action="send_email.php" target="_blank" class="row g-3" style="padding: 1.5%;"> 
+    <div class="col-8">
+      <label for="inputNome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="inputNome" required>
+    </div>
+    <div class="col-4">
+      <label for="inputDate" class="form-label">Data de nascimento</label>
+      <input type="date" class="form-control" id="inputDate" required>
+    </div>
+    <div class="col-6">
+      <label for="inputCPF" class="form-label">CPF</label>
+      <input type="text" class="form-control" id="inputCPF" placeholder="000.000.000-00" required>
+    </div>
+    <div class="col-6">
+      <label for="inputTelefone" class="form-label">Telefone</label>
+      <input type="text" class="form-control" id="inputTelefone" placeholder="(DDD) Seu número aqui">
+    </div>
+    <div class="col-6">
+      <label for="inputCidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" id="inputCidade" required>
+    </div>
+    <div class="col-6">
+      <label for="inputEstado" class="form-label">Estado</label>
+      <input type="text" class="form-control" id="inputEstado">
+    </div>
+    <div class="col-3">
+      <label for="inputAutonomo" class="form-label">Autônomo</label>
+      <select id="inputAutonomo" class="form-select" required>
+        <option selected>Selecionar</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label for="inputCNH" class="form-label">CNH</label>
+      <select id="inputCNH" class="form-select" required>
+        <option selected>Selecionar</option>
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label for="inputRestricao" class="form-label">Restrição</label>
+      <select id="inputRestricao" class="form-select" required>
+        <option selected>Selecionar</option>
+        <option>Sim</option>
+        <option>Não</option>
+        <option>Não sei</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label for="inputScore" class="form-label">Score</label>
+      <select id="inputScore" class="form-select" required>
+        <option selected>Selecionar</option>
+        <option>Alto</option>
+        <option>Médio</option>
+        <option>Baixo</option>
+        <option>Não sei</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label for="inputFinanciar" class="form-label">Financiar</label>
+      <select id="inputFinanciar" class="form-select" required>
+        <option selected>Selecionar</option>
+        <option>Já tentei</option>
+        <option>Não tentei</option>
+      </select>
+    </div>
+    <div class="col-3">
+      <label for="inputValor" class="form-label">Valor veículo</label>
+      <input type="number" class="form-control" id="inputValor" placeholder="Apenas números" required>
+    </div>
+    <div class="col-3">
+      <label for="inputEntrada" class="form-label">Entrada</label>
+      <input type="number" class="form-control" id="inputEntrada" placeholder="Apenas números" required>
+    </div>
+    <div class="col-3">
+      <label for="inputParcela" class="form-label">Parcelas</label>
+      <input type="number" class="form-control" id="inputParcela" placeholder="Apenas números" required>
+    </div>
+    <div class="col-12">
+      <label for="inputObs" class="form-label">Observações</label>
+      <input type="text" class="form-control" id="inputObs">
+    </div>
+  </form>
+  <div class="col-md-12">
+    <br>
+  </div>
+  <div class="col-8" style="padding: 1.5%;">
+    <button type="submit" class="btn btn-success" value="enviar" id="enviar">Gravar informações</button>
+
+    <button type="button" class="btn btn-danger">Cancelar</button>
+  </div>
+</body>
+</html>
